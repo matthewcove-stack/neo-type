@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-export default class Bullet extends Phaser.Physics.Arcade.Image {
+export default class Beam extends Phaser.Physics.Arcade.Image {
   constructor(scene: Phaser.Scene, x: number, y: number, texture: string) {
     super(scene, x, y, texture);
 
@@ -16,7 +16,6 @@ export default class Bullet extends Phaser.Physics.Arcade.Image {
     this.setPosition(x, y);
     this.setActive(true);
     this.setVisible(true);
-
     const body = this.body as Phaser.Physics.Arcade.Body;
     body.enable = true;
     this.setVelocity(speed, 0);
